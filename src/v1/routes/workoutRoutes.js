@@ -1,12 +1,13 @@
-//@ts-check
-const express = require("express");
-const router = express.Router();
-const workoutsController = require("../../controller/workoutsController");
+// @ts-check
+const express = require('express');
 
-router.get("/", workoutsController.getAllWorkouts);
-router.get("/:id", workoutsController.getWorkoutById);
-router.post("/", workoutsController.createWorkout);
-router.put("/:id", workoutsController.updateWorkout);
-router.delete("/:id", workoutsController.deleteWorkout);
+const router = express.Router();
+const workoutsController = require('../../controller/workoutsController');
+
+router.get('/', workoutsController.getAllWorkouts);
+router.get('/:id', workoutsController.getWorkoutById);
+router.post('/', workoutsController.createWorkout);
+router.put('/:id', workoutsController.updateWorkout);
+router.delete('/:id', workoutsController.deleteWorkout);
 
 module.exports = router;

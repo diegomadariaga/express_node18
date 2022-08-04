@@ -33,6 +33,11 @@ function getAllWorkouts() {
 function getWorkoutById(id) {
     return workouts.find((workout) => workout.id === id);
 }
+/**
+ * Create a workout by adding it to the workouts array and returning the workout.
+ * @param {import("./types").Workout} workout - This is the workout object that we're creating.
+ * @returns The workout object is being returned.
+ */
 function createWorkout(workout) {
     workout.id = workouts.length + 1;
     workouts.push(workout);
