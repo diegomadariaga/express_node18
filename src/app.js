@@ -12,7 +12,7 @@ app.use(helmet());
 // Middleware for all routes
 function enableXssProtection(req, res, next) {
     // set x-xss-protection 1; mode=block
-    res.set("X-XSS-Protection", "1; mode=block");
+    res.set("X-XSS-Protection", "1");
     next();
 }
 // use middleware for all routes
